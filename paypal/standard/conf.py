@@ -2,7 +2,7 @@ from django.conf import settings
 
 class PayPalSettingsError(Exception):
     """Raised when settings be bad."""
-    
+
 
 TEST = getattr(settings, "PAYPAL_TEST", True)
 

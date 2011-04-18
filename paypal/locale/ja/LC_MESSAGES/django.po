@@ -1,0 +1,1022 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2010-12-05 22:40-0600\n"
+"PO-Revision-Date: 2010-11-20 15:04+0900\n"
+"Last-Translator: takuya\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: apps/paypal/pro/fields.py:133
+msgid "United States of America"
+msgstr "アメリカ合衆国"
+
+#: apps/paypal/pro/fields.py:134
+msgid "Canada"
+msgstr "カナダ"
+
+#: apps/paypal/pro/fields.py:135
+msgid "Afghanistan"
+msgstr "アフガニスタン"
+
+#: apps/paypal/pro/fields.py:136
+msgid "Albania"
+msgstr "アルバニア"
+
+#: apps/paypal/pro/fields.py:137
+msgid "Algeria"
+msgstr "アルジェリア"
+
+#: apps/paypal/pro/fields.py:138
+msgid "American Samoa"
+msgstr "アメリカ領サモア"
+
+#: apps/paypal/pro/fields.py:139
+msgid "Andorra"
+msgstr "アンドラ"
+
+#: apps/paypal/pro/fields.py:140
+msgid "Angola"
+msgstr "アンゴラ"
+
+#: apps/paypal/pro/fields.py:141
+msgid "Anguilla"
+msgstr "アンギラ"
+
+#: apps/paypal/pro/fields.py:142
+msgid "Antarctica"
+msgstr "南極大陸"
+
+#: apps/paypal/pro/fields.py:143
+msgid "Antigua & Barbuda"
+msgstr "アンティグア･バブーダ"
+
+#: apps/paypal/pro/fields.py:144
+msgid "Argentina"
+msgstr "アルゼンチン"
+
+#: apps/paypal/pro/fields.py:145
+msgid "Armenia"
+msgstr "アルメニア"
+
+#: apps/paypal/pro/fields.py:146
+msgid "Aruba"
+msgstr "アルーバ"
+
+#: apps/paypal/pro/fields.py:147
+msgid "Australia"
+msgstr "オーストラリア"
+
+#: apps/paypal/pro/fields.py:148
+msgid "Austria"
+msgstr "オーストリア"
+
+#: apps/paypal/pro/fields.py:149
+msgid "Azerbaijan"
+msgstr "アゼルバイジャン"
+
+#: apps/paypal/pro/fields.py:150
+msgid "Bahama"
+msgstr "バハマ"
+
+#: apps/paypal/pro/fields.py:151
+msgid "Bahrain"
+msgstr "バーレーン"
+
+#: apps/paypal/pro/fields.py:152
+msgid "Bangladesh"
+msgstr "バングラディッシュ"
+
+#: apps/paypal/pro/fields.py:153
+msgid "Barbados"
+msgstr "バルバドス"
+
+#: apps/paypal/pro/fields.py:154
+msgid "Belarus"
+msgstr "ベラルーシ"
+
+#: apps/paypal/pro/fields.py:155
+msgid "Belgium"
+msgstr "ベルギー"
+
+#: apps/paypal/pro/fields.py:156
+msgid "Belize"
+msgstr "ベリーズ"
+
+#: apps/paypal/pro/fields.py:157
+msgid "Benin"
+msgstr "ベナン"
+
+#: apps/paypal/pro/fields.py:158
+msgid "Bermuda"
+msgstr "バーミューダ"
+
+#: apps/paypal/pro/fields.py:159
+msgid "Bhutan"
+msgstr "ブータン"
+
+#: apps/paypal/pro/fields.py:160
+msgid "Bolivia"
+msgstr "ボリビア"
+
+#: apps/paypal/pro/fields.py:161
+msgid "Bosnia and Herzegovina"
+msgstr "ボスニア・ヘルツェゴビナ"
+
+#: apps/paypal/pro/fields.py:162
+msgid "Botswana"
+msgstr "ボツワナ"
+
+#: apps/paypal/pro/fields.py:163
+msgid "Bouvet Island"
+msgstr "ブーベー島"
+
+#: apps/paypal/pro/fields.py:164
+msgid "Brazil"
+msgstr "ブラジル"
+
+#: apps/paypal/pro/fields.py:165
+msgid "British Indian Ocean Territory"
+msgstr "イギリス領インド洋地域"
+
+#: apps/paypal/pro/fields.py:166
+msgid "British Virgin Islands"
+msgstr "イギリス領ヴァージン諸島"
+
+#: apps/paypal/pro/fields.py:167
+msgid "Brunei Darussalam"
+msgstr "ブルネイ･ダルサラーム"
+
+#: apps/paypal/pro/fields.py:168
+msgid "Bulgaria"
+msgstr "ブルガリア"
+
+#: apps/paypal/pro/fields.py:169
+msgid "Burkina Faso"
+msgstr "ブルキナファソ"
+
+#: apps/paypal/pro/fields.py:170
+msgid "Burundi"
+msgstr "ブルンジ"
+
+#: apps/paypal/pro/fields.py:171
+msgid "Cambodia"
+msgstr "カンボジア"
+
+#: apps/paypal/pro/fields.py:172
+msgid "Cameroon"
+msgstr "カメルーン"
+
+#: apps/paypal/pro/fields.py:173
+msgid "Cape Verde"
+msgstr "カボベルデ"
+
+#: apps/paypal/pro/fields.py:174
+msgid "Cayman Islands"
+msgstr "ケイマン諸島"
+
+#: apps/paypal/pro/fields.py:175
+msgid "Central African Republic"
+msgstr "中央アフリカ共和国"
+
+#: apps/paypal/pro/fields.py:176
+msgid "Chad"
+msgstr "チャド"
+
+#: apps/paypal/pro/fields.py:177
+msgid "Chile"
+msgstr "チリ"
+
+#: apps/paypal/pro/fields.py:178
+msgid "China"
+msgstr "中国"
+
+#: apps/paypal/pro/fields.py:179
+msgid "Christmas Island"
+msgstr "クリスマス諸島"
+
+#: apps/paypal/pro/fields.py:180
+msgid "Cocos (Keeling) Islands"
+msgstr "ココス(キーリング)諸島"
+
+#: apps/paypal/pro/fields.py:181
+msgid "Colombia"
+msgstr "コロンビア"
+
+#: apps/paypal/pro/fields.py:182
+msgid "Comoros"
+msgstr "コモロ連合"
+
+#: apps/paypal/pro/fields.py:183
+msgid "Congo"
+msgstr "コンゴ"
+
+#: apps/paypal/pro/fields.py:184
+msgid "Cook Iislands"
+msgstr "クック諸島"
+
+#: apps/paypal/pro/fields.py:185
+msgid "Costa Rica"
+msgstr "コスタリカ"
+
+#: apps/paypal/pro/fields.py:186
+msgid "Croatia"
+msgstr "クロアチア"
+
+#: apps/paypal/pro/fields.py:187
+msgid "Cuba"
+msgstr "キューバ"
+
+#: apps/paypal/pro/fields.py:188
+msgid "Cyprus"
+msgstr "キプロス"
+
+#: apps/paypal/pro/fields.py:189
+msgid "Czech Republic"
+msgstr "チェコ共和国"
+
+#: apps/paypal/pro/fields.py:190
+msgid "Denmark"
+msgstr "デンマーク"
+
+#: apps/paypal/pro/fields.py:191
+msgid "Djibouti"
+msgstr "ジブチ"
+
+#: apps/paypal/pro/fields.py:192
+msgid "Dominica"
+msgstr "ドミニカ"
+
+#: apps/paypal/pro/fields.py:193
+msgid "Dominican Republic"
+msgstr "ドミニカ共和国"
+
+#: apps/paypal/pro/fields.py:194
+msgid "East Timor"
+msgstr "東ティモール"
+
+#: apps/paypal/pro/fields.py:195
+msgid "Ecuador"
+msgstr "エクアドル"
+
+#: apps/paypal/pro/fields.py:196
+msgid "Egypt"
+msgstr "エジプト"
+
+#: apps/paypal/pro/fields.py:197
+msgid "El Salvador"
+msgstr "エルサルバドル"
+
+#: apps/paypal/pro/fields.py:198
+msgid "Equatorial Guinea"
+msgstr "赤道ギニア"
+
+#: apps/paypal/pro/fields.py:199
+msgid "Eritrea"
+msgstr "エリトリア"
+
+#: apps/paypal/pro/fields.py:200
+msgid "Estonia"
+msgstr "エストニア"
+
+#: apps/paypal/pro/fields.py:201
+msgid "Ethiopia"
+msgstr "エチオピア"
+
+#: apps/paypal/pro/fields.py:202
+msgid "Falkland Islands (Malvinas)"
+msgstr "フォークランド諸島(マルビナス)"
+
+#: apps/paypal/pro/fields.py:203
+msgid "Faroe Islands"
+msgstr "フェロー諸島"
+
+#: apps/paypal/pro/fields.py:204
+msgid "Fiji"
+msgstr "フィジー"
+
+#: apps/paypal/pro/fields.py:205
+msgid "Finland"
+msgstr "フィンランド"
+
+#: apps/paypal/pro/fields.py:206
+msgid "France"
+msgstr "フランス"
+
+#: apps/paypal/pro/fields.py:207
+msgid "France, Metropolitan"
+msgstr "フランス首都圏"
+
+#: apps/paypal/pro/fields.py:208
+msgid "French Guiana"
+msgstr "フランス領ギアナ"
+
+#: apps/paypal/pro/fields.py:209
+msgid "French Polynesia"
+msgstr "フランス領ポリネシア"
+
+#: apps/paypal/pro/fields.py:210
+msgid "French Southern Territories"
+msgstr "フランス南部海外領"
+
+#: apps/paypal/pro/fields.py:211
+msgid "Gabon"
+msgstr "ガボン"
+
+#: apps/paypal/pro/fields.py:212
+msgid "Gambia"
+msgstr "ガンビア"
+
+#: apps/paypal/pro/fields.py:213
+msgid "Georgia"
+msgstr "ジョージア"
+
+#: apps/paypal/pro/fields.py:214
+msgid "Germany"
+msgstr "ドイツ"
+
+#: apps/paypal/pro/fields.py:215
+msgid "Ghana"
+msgstr "ガーナ"
+
+#: apps/paypal/pro/fields.py:216
+msgid "Gibraltar"
+msgstr "ジブラルタル"
+
+#: apps/paypal/pro/fields.py:217
+msgid "Greece"
+msgstr "ギリシャ"
+
+#: apps/paypal/pro/fields.py:218
+msgid "Greenland"
+msgstr "グリーンランド"
+
+#: apps/paypal/pro/fields.py:219
+msgid "Grenada"
+msgstr "グレナダ"
+
+#: apps/paypal/pro/fields.py:220
+msgid "Guadeloupe"
+msgstr "グアドループ"
+
+#: apps/paypal/pro/fields.py:221
+msgid "Guam"
+msgstr "グアム"
+
+#: apps/paypal/pro/fields.py:222
+msgid "Guatemala"
+msgstr "グアテマラ"
+
+#: apps/paypal/pro/fields.py:223
+msgid "Guinea"
+msgstr "ギニア"
+
+#: apps/paypal/pro/fields.py:224
+msgid "Guinea-Bissau"
+msgstr "ギニアビサウ共和国"
+
+#: apps/paypal/pro/fields.py:225
+msgid "Guyana"
+msgstr "ガイアナ"
+
+#: apps/paypal/pro/fields.py:226
+msgid "Haiti"
+msgstr "ハイチ"
+
+#: apps/paypal/pro/fields.py:227
+msgid "Heard & McDonald Islands"
+msgstr "ハード島とマクドナルド諸島"
+
+#: apps/paypal/pro/fields.py:228
+msgid "Honduras"
+msgstr "ホンジュラス共和国"
+
+#: apps/paypal/pro/fields.py:229
+msgid "Hong Kong"
+msgstr "香港"
+
+#: apps/paypal/pro/fields.py:230
+msgid "Hungary"
+msgstr "ハンガリー"
+
+#: apps/paypal/pro/fields.py:231
+msgid "Iceland"
+msgstr "アイスランド"
+
+#: apps/paypal/pro/fields.py:232
+msgid "India"
+msgstr "インド"
+
+#: apps/paypal/pro/fields.py:233
+msgid "Indonesia"
+msgstr "インドネシア"
+
+#: apps/paypal/pro/fields.py:234
+msgid "Iraq"
+msgstr "イラク"
+
+#: apps/paypal/pro/fields.py:235
+msgid "Ireland"
+msgstr "アイルランド"
+
+#: apps/paypal/pro/fields.py:236
+msgid "Islamic Republic of Iran"
+msgstr "イラン・イスラム共和国"
+
+#: apps/paypal/pro/fields.py:237
+msgid "Israel"
+msgstr "イスラエル"
+
+#: apps/paypal/pro/fields.py:238
+msgid "Italy"
+msgstr "イタリア"
+
+#: apps/paypal/pro/fields.py:239
+msgid "Ivory Coast"
+msgstr "コートジボワール"
+
+#: apps/paypal/pro/fields.py:240
+msgid "Jamaica"
+msgstr "ジャマイカ"
+
+#: apps/paypal/pro/fields.py:241
+msgid "Japan"
+msgstr "日本"
+
+#: apps/paypal/pro/fields.py:242
+msgid "Jordan"
+msgstr "ヨルダン"
+
+#: apps/paypal/pro/fields.py:243
+msgid "Kazakhstan"
+msgstr "カザフスタン"
+
+#: apps/paypal/pro/fields.py:244
+msgid "Kenya"
+msgstr "ケニア"
+
+#: apps/paypal/pro/fields.py:245
+msgid "Kiribati"
+msgstr "キリバス"
+
+#: apps/paypal/pro/fields.py:246
+msgid "Korea, Democratic People's Republic of"
+msgstr "北朝鮮"
+
+#: apps/paypal/pro/fields.py:247
+msgid "Korea, Republic of"
+msgstr "韓国"
+
+#: apps/paypal/pro/fields.py:248
+msgid "Kuwait"
+msgstr "クウェート"
+
+#: apps/paypal/pro/fields.py:249
+msgid "Kyrgyzstan"
+msgstr "キルギス"
+
+#: apps/paypal/pro/fields.py:250
+msgid "Lao People's Democratic Republic"
+msgstr "ラオス人民民主共和国"
+
+#: apps/paypal/pro/fields.py:251
+msgid "Latvia"
+msgstr "ラトビア"
+
+#: apps/paypal/pro/fields.py:252
+msgid "Lebanon"
+msgstr "レバノン"
+
+#: apps/paypal/pro/fields.py:253
+msgid "Lesotho"
+msgstr "レント王国"
+
+#: apps/paypal/pro/fields.py:254
+msgid "Liberia"
+msgstr "リベリア"
+
+#: apps/paypal/pro/fields.py:255
+msgid "Libyan Arab Jamahiriya"
+msgstr "リビア"
+
+#: apps/paypal/pro/fields.py:256
+msgid "Liechtenstein"
+msgstr "リヒテンシュタイン公国"
+
+#: apps/paypal/pro/fields.py:257
+msgid "Lithuania"
+msgstr "リトアニア"
+
+#: apps/paypal/pro/fields.py:258
+msgid "Luxembourg"
+msgstr "ルクセンブルグ"
+
+#: apps/paypal/pro/fields.py:259
+msgid "Macau"
+msgstr "マカオ"
+
+#: apps/paypal/pro/fields.py:260
+msgid "Madagascar"
+msgstr "マダガスカル"
+
+#: apps/paypal/pro/fields.py:261
+msgid "Malawi"
+msgstr "マラウイ"
+
+#: apps/paypal/pro/fields.py:262
+msgid "Malaysia"
+msgstr "マレーシア"
+
+#: apps/paypal/pro/fields.py:263
+msgid "Maldives"
+msgstr "モルディブ"
+
+#: apps/paypal/pro/fields.py:264
+msgid "Mali"
+msgstr "マリ共和国"
+
+#: apps/paypal/pro/fields.py:265
+msgid "Malta"
+msgstr "マルタ"
+
+#: apps/paypal/pro/fields.py:266
+msgid "Marshall Islands"
+msgstr "マーシャル諸島"
+
+#: apps/paypal/pro/fields.py:267
+msgid "Martinique"
+msgstr "マルティニク"
+
+#: apps/paypal/pro/fields.py:268
+msgid "Mauritania"
+msgstr "モーリタニア"
+
+#: apps/paypal/pro/fields.py:269
+msgid "Mauritius"
+msgstr "モーリシャス"
+
+#: apps/paypal/pro/fields.py:270
+msgid "Mayotte"
+msgstr "マヨット"
+
+#: apps/paypal/pro/fields.py:271
+msgid "Mexico"
+msgstr "メキシコ"
+
+#: apps/paypal/pro/fields.py:272
+msgid "Micronesia"
+msgstr "ミクロネシア"
+
+#: apps/paypal/pro/fields.py:273
+msgid "Moldova, Republic of"
+msgstr "モルドバ共和国"
+
+#: apps/paypal/pro/fields.py:274
+msgid "Monaco"
+msgstr "モナコ"
+
+#: apps/paypal/pro/fields.py:275
+msgid "Mongolia"
+msgstr "モンゴル"
+
+#: apps/paypal/pro/fields.py:276
+msgid "Monserrat"
+msgstr "モントセラト"
+
+#: apps/paypal/pro/fields.py:277
+msgid "Morocco"
+msgstr "モロッコ"
+
+#: apps/paypal/pro/fields.py:278
+msgid "Mozambique"
+msgstr "モザンビーク"
+
+#: apps/paypal/pro/fields.py:279
+msgid "Myanmar"
+msgstr "ミャンマー"
+
+#: apps/paypal/pro/fields.py:280
+msgid "Namibia"
+msgstr "ナミビア"
+
+#: apps/paypal/pro/fields.py:281
+msgid "Nauru"
+msgstr "ナウル"
+
+#: apps/paypal/pro/fields.py:282
+msgid "Nepal"
+msgstr "ネパール"
+
+#: apps/paypal/pro/fields.py:283
+msgid "Netherlands"
+msgstr "オランダ"
+
+#: apps/paypal/pro/fields.py:284
+msgid "Netherlands Antilles"
+msgstr "オランダ領アンティル諸島"
+
+#: apps/paypal/pro/fields.py:285
+msgid "New Caledonia"
+msgstr "ニューカレドニア"
+
+#: apps/paypal/pro/fields.py:286
+msgid "New Zealand"
+msgstr "ニュージーランド"
+
+#: apps/paypal/pro/fields.py:287
+msgid "Nicaragua"
+msgstr "ニカラグア"
+
+#: apps/paypal/pro/fields.py:288
+msgid "Niger"
+msgstr "ニジェール"
+
+#: apps/paypal/pro/fields.py:289
+msgid "Nigeria"
+msgstr "ナイジェリア"
+
+#: apps/paypal/pro/fields.py:290
+msgid "Niue"
+msgstr "ニウエ"
+
+#: apps/paypal/pro/fields.py:291
+msgid "Norfolk Island"
+msgstr "ノーフォーク島"
+
+#: apps/paypal/pro/fields.py:292
+msgid "Northern Mariana Islands"
+msgstr "北マリアナ諸島"
+
+#: apps/paypal/pro/fields.py:293
+msgid "Norway"
+msgstr "ノルウェー"
+
+#: apps/paypal/pro/fields.py:294
+msgid "Oman"
+msgstr "オマーン"
+
+#: apps/paypal/pro/fields.py:295
+msgid "Pakistan"
+msgstr "パキスタン"
+
+#: apps/paypal/pro/fields.py:296
+msgid "Palau"
+msgstr "パラオ"
+
+#: apps/paypal/pro/fields.py:297
+msgid "Panama"
+msgstr "パナマ"
+
+#: apps/paypal/pro/fields.py:298
+msgid "Papua New Guinea"
+msgstr "パプアニューギニア"
+
+#: apps/paypal/pro/fields.py:299
+msgid "Paraguay"
+msgstr "パラグアイ"
+
+#: apps/paypal/pro/fields.py:300
+msgid "Peru"
+msgstr "ペルー"
+
+#: apps/paypal/pro/fields.py:301
+msgid "Philippines"
+msgstr "フィリピン"
+
+#: apps/paypal/pro/fields.py:302
+msgid "Pitcairn"
+msgstr "ピトケアン諸島"
+
+#: apps/paypal/pro/fields.py:303
+msgid "Poland"
+msgstr "ポーランド"
+
+#: apps/paypal/pro/fields.py:304
+msgid "Portugal"
+msgstr "ポルトガル"
+
+#: apps/paypal/pro/fields.py:305
+msgid "Puerto Rico"
+msgstr "プエルトリコ"
+
+#: apps/paypal/pro/fields.py:306
+msgid "Qatar"
+msgstr "カタール"
+
+#: apps/paypal/pro/fields.py:307
+msgid "Reunion"
+msgstr "レユニオン"
+
+#: apps/paypal/pro/fields.py:308
+msgid "Romania"
+msgstr "ルーマニア"
+
+#: apps/paypal/pro/fields.py:309
+msgid "Russian Federation"
+msgstr "ロシア"
+
+#: apps/paypal/pro/fields.py:310
+msgid "Rwanda"
+msgstr "ルワンダ"
+
+#: apps/paypal/pro/fields.py:311
+msgid "Saint Lucia"
+msgstr "セントルシア"
+
+#: apps/paypal/pro/fields.py:312
+msgid "Samoa"
+msgstr "サモア"
+
+#: apps/paypal/pro/fields.py:313
+msgid "San Marino"
+msgstr "サンマリノ"
+
+#: apps/paypal/pro/fields.py:314
+msgid "Sao Tome & Principe"
+msgstr "サントメプリンシペ"
+
+#: apps/paypal/pro/fields.py:315
+msgid "Saudi Arabia"
+msgstr "サウジアラビア"
+
+#: apps/paypal/pro/fields.py:316
+msgid "Senegal"
+msgstr "セネガル"
+
+#: apps/paypal/pro/fields.py:317
+msgid "Seychelles"
+msgstr "セイシェル"
+
+#: apps/paypal/pro/fields.py:318
+msgid "Sierra Leone"
+msgstr "シエラレオネ"
+
+#: apps/paypal/pro/fields.py:319
+msgid "Singapore"
+msgstr "シンガポール"
+
+#: apps/paypal/pro/fields.py:320
+msgid "Slovakia"
+msgstr "スロバキア"
+
+#: apps/paypal/pro/fields.py:321
+msgid "Slovenia"
+msgstr "スロベニア"
+
+#: apps/paypal/pro/fields.py:322
+msgid "Solomon Islands"
+msgstr "ソロモン諸島"
+
+#: apps/paypal/pro/fields.py:323
+msgid "Somalia"
+msgstr "ソマリア"
+
+#: apps/paypal/pro/fields.py:324
+msgid "South Africa"
+msgstr "南アフリカ"
+
+#: apps/paypal/pro/fields.py:325
+msgid "South Georgia and the South Sandwich Islands"
+msgstr "サウスジョージア・サウスサンドウィッチ諸島"
+
+#: apps/paypal/pro/fields.py:326
+msgid "Spain"
+msgstr "スペイン"
+
+#: apps/paypal/pro/fields.py:327
+msgid "Sri Lanka"
+msgstr "スリランカ"
+
+#: apps/paypal/pro/fields.py:328
+msgid "St. Helena"
+msgstr "セントヘレナ"
+
+#: apps/paypal/pro/fields.py:329
+msgid "St. Kitts and Nevis"
+msgstr "セントクリストファー･ネイビス"
+
+#: apps/paypal/pro/fields.py:330
+msgid "St. Pierre & Miquelon"
+msgstr "サンピエール島とミクロン島"
+
+#: apps/paypal/pro/fields.py:331
+msgid "St. Vincent & the Grenadines"
+msgstr "セントビンセント・グレナディーン諸島"
+
+#: apps/paypal/pro/fields.py:332
+msgid "Sudan"
+msgstr "スーダン"
+
+#: apps/paypal/pro/fields.py:333
+msgid "Suriname"
+msgstr "スリナム"
+
+#: apps/paypal/pro/fields.py:334
+msgid "Svalbard & Jan Mayen Islands"
+msgstr "ノルウェー領スバールバル諸島支店"
+
+#: apps/paypal/pro/fields.py:335
+msgid "Swaziland"
+msgstr "スワジランド"
+
+#: apps/paypal/pro/fields.py:336
+msgid "Sweden"
+msgstr "スウェーデン"
+
+#: apps/paypal/pro/fields.py:337
+msgid "Switzerland"
+msgstr "スイス"
+
+#: apps/paypal/pro/fields.py:338
+msgid "Syrian Arab Republic"
+msgstr "シリア"
+
+#: apps/paypal/pro/fields.py:339
+msgid "Taiwan, Province of China"
+msgstr "台湾（中国）"
+
+#: apps/paypal/pro/fields.py:340
+msgid "Tajikistan"
+msgstr "タジキスタン"
+
+#: apps/paypal/pro/fields.py:341
+msgid "Tanzania, United Republic of"
+msgstr "タンザニア"
+
+#: apps/paypal/pro/fields.py:342
+msgid "Thailand"
+msgstr "タイ"
+
+#: apps/paypal/pro/fields.py:343
+msgid "Togo"
+msgstr "トーゴ"
+
+#: apps/paypal/pro/fields.py:344
+msgid "Tokelau"
+msgstr "トケラウ"
+
+#: apps/paypal/pro/fields.py:345
+msgid "Tonga"
+msgstr "トンガ"
+
+#: apps/paypal/pro/fields.py:346
+msgid "Trinidad & Tobago"
+msgstr "トリニダード・ドバゴ"
+
+#: apps/paypal/pro/fields.py:347
+msgid "Tunisia"
+msgstr "チュニジア"
+
+#: apps/paypal/pro/fields.py:348
+msgid "Turkey"
+msgstr "トルコ"
+
+#: apps/paypal/pro/fields.py:349
+msgid "Turkmenistan"
+msgstr "トリクメニスタン"
+
+#: apps/paypal/pro/fields.py:350
+msgid "Turks & Caicos Islands"
+msgstr "タークス･カイコス諸島"
+
+#: apps/paypal/pro/fields.py:351
+msgid "Tuvalu"
+msgstr "ツバル"
+
+#: apps/paypal/pro/fields.py:352
+msgid "Uganda"
+msgstr "ウガンダ"
+
+#: apps/paypal/pro/fields.py:353
+msgid "Ukraine"
+msgstr "ウルライナ"
+
+#: apps/paypal/pro/fields.py:354
+msgid "United Arab Emirates"
+msgstr "アラブ首長国連邦"
+
+#: apps/paypal/pro/fields.py:355
+msgid "United Kingdom (Great Britain)"
+msgstr "イギリス"
+
+#: apps/paypal/pro/fields.py:356
+msgid "United States Minor Outlying Islands"
+msgstr "アメリカ領太平洋諸島"
+
+#: apps/paypal/pro/fields.py:357
+msgid "United States Virgin Islands"
+msgstr "アメリカ領ヴァージン諸島"
+
+#: apps/paypal/pro/fields.py:358
+msgid "Unknown or unspecified country"
+msgstr "未知または不特定の国"
+
+#: apps/paypal/pro/fields.py:359
+msgid "Uruguay"
+msgstr "ウルグアイ"
+
+#: apps/paypal/pro/fields.py:360
+msgid "Uzbekistan"
+msgstr "ウズベキスタン"
+
+#: apps/paypal/pro/fields.py:361
+msgid "Vanuatu"
+msgstr "バヌアツ"
+
+#: apps/paypal/pro/fields.py:362
+msgid "Vatican City State (Holy See)"
+msgstr "バチカン市国"
+
+#: apps/paypal/pro/fields.py:363
+msgid "Venezuela"
+msgstr "ベネズエラ"
+
+#: apps/paypal/pro/fields.py:364
+msgid "Viet Nam"
+msgstr "ベトナム"
+
+#: apps/paypal/pro/fields.py:365
+msgid "Wallis & Futuna Islands"
+msgstr "ウォリス・フトゥナ諸島"
+
+#: apps/paypal/pro/fields.py:366
+msgid "Western Sahara"
+msgstr "西サハラ"
+
+#: apps/paypal/pro/fields.py:367
+msgid "Yemen"
+msgstr "イエメン"
+
+#: apps/paypal/pro/fields.py:368
+msgid "Yugoslavia"
+msgstr "ユーゴスラビア"
+
+#: apps/paypal/pro/fields.py:369
+msgid "Zaire"
+msgstr "ザイール"
+
+#: apps/paypal/pro/fields.py:370
+msgid "Zambia"
+msgstr "ザンビア"
+
+#: apps/paypal/pro/fields.py:371
+msgid "Zimbabwe"
+msgstr "ジンバブエ"
+
+#: apps/paypal/pro/forms.py:11
+msgid "First Name"
+msgstr "名前"
+
+#: apps/paypal/pro/forms.py:12
+msgid "Last Name"
+msgstr "姓"
+
+#: apps/paypal/pro/forms.py:14
+msgid "Street Address"
+msgstr "番地"
+
+#: apps/paypal/pro/forms.py:16
+msgid "City"
+msgstr "区市町村"
+
+#: apps/paypal/pro/forms.py:17
+msgid "State / Province"
+msgstr "都道府県"
+
+#: apps/paypal/pro/forms.py:18
+msgid "Country"
+msgstr "国"
+
+#: apps/paypal/pro/forms.py:19
+msgid "Postal / Zip Code"
+msgstr "郵便番号"
+
+#: apps/paypal/pro/forms.py:21
+msgid "Credit Card Number"
+msgstr "クレジットカードナンバー"
+
+#: apps/paypal/pro/forms.py:22
+msgid "Card Security Code"
+msgstr "カードセキュリティーコード"
+
+#: apps/paypal/pro/forms.py:22
+msgid ""
+"You can find the 3-digit code on the back of your Visa/MasterCard/Discover "
+"card, next to your signature, or a small 4-digit number printed on the front "
+"of your American Express card."
+msgstr ""
+"Visa/MasterCard/Discoverカードの場合は裏面の署名欄の隣にある小さな３桁の数"
+"字、American Expressカードの場合は表面にプリントされている小さな４桁の数字で"
+"す。"
+
+#: apps/paypal/pro/forms.py:23
+msgid "Expiration Date"
+msgstr "有効期限"

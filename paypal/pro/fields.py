@@ -5,6 +5,9 @@ from datetime import date
 
 from django.db import models
 from django import forms
+from django.forms.util import flatatt
+from django.utils.encoding import force_unicode
+from django.utils.safestring import mark_safe
 from django.utils.translation import ugettext as _
 
 from paypal.pro.creditcard import verify_credit_card
@@ -15,14 +18,14 @@ class CreditCardField(forms.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 20)
         super(CreditCardField, self).__init__(*args, **kwargs)
-        
+
     def clean(self, value):
         """Raises a ValidationError if the card is not valid and stashes card type."""
-        if value:
-            value = value.replace('-', '').replace(' ', '')
-            self.card_type = verify_credit_card(value)
-            if self.card_type is None:
-                raise forms.ValidationError("Invalid credit card number.")
+        value = value or ''
+        value = value.replace('-', '').replace(' ', '')
+        self.card_type = verify_credit_card(value)
+        if self.card_type is None:
+            raise forms.ValidationError("Invalid credit card number.")
         return value
 
 
@@ -42,7 +45,38 @@ class CreditCardExpiryWidget(forms.MultiWidget):
         html = u' / '.join(rendered_widgets)
         return u'<span style="white-space: nowrap">%s</span>' % html
 
+class CreditCardExpiryHiddenWidget(forms.HiddenInput):
+    """
+    A widget that handles <input type="hidden"> for fields that have a list
+    of values.
+    """
+    def __init__(self, attrs=None, choices=()):
+        super(CreditCardExpiryHiddenWidget, self).__init__(attrs)
+        # choices can be any iterable
+        self.choices = choices
+
+    def render(self, name, value, attrs=None, choices=()):
+        if value is None: value = []
+        final_attrs = self.build_attrs(attrs, type=self.input_type, name=name)
+        id_ = final_attrs.get('id', None)
+        inputs = []
+        for i, v in enumerate(value):
+            final_attrs['name'] = "%s_%s" % (name, i)
+            input_attrs = dict(value=force_unicode(v), **final_attrs)
+            if id_:
+                # An ID attribute was given. Add a numeric index as a suffix
+                # so that the inputs don't all have the same ID attribute.
+                input_attrs['id'] = '%s_%s' % (id_, i)
+            inputs.append(u'<input%s />' % flatatt(input_attrs))
+        return mark_safe(u'\n'.join(inputs))
+
+    def value_from_datadict(self, data, files, name):
+        if isinstance(data, (MultiValueDict, MergeDict)):
+            return data.getlist(name)
+        return data.get(name, None)
+
 class CreditCardExpiryField(forms.MultiValueField):
+    hidden_widget = CreditCardExpiryHiddenWidget
     EXP_MONTH = [(x, x) for x in xrange(1, 13)]
     EXP_YEAR = [(x, x) for x in xrange(date.today().year, date.today().year + 15)]
 
@@ -55,12 +89,12 @@ class CreditCardExpiryField(forms.MultiValueField):
         errors = self.default_error_messages.copy()
         if 'error_messages' in kwargs:
             errors.update(kwargs['error_messages'])
-        
+
         fields = (
             forms.ChoiceField(choices=self.EXP_MONTH, error_messages={'invalid': errors['invalid_month']}),
             forms.ChoiceField(choices=self.EXP_YEAR, error_messages={'invalid': errors['invalid_year']}),
         )
-        
+
         super(CreditCardExpiryField, self).__init__(fields, *args, **kwargs)
         self.widget = CreditCardExpiryWidget(widgets=[fields[0].widget, fields[1].widget])
 
@@ -90,7 +124,7 @@ class CreditCardCVV2Field(forms.CharField):
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 4)
         super(CreditCardCVV2Field, self).__init__(*args, **kwargs)
-        
+
 
 # Country Field from:
 # http://www.djangosnippets.org/snippets/494/

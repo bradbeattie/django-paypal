@@ -17,7 +17,7 @@ from paypal.pro.models import PayPalNVP, L
 from paypal.pro.exceptions import PayPalFailure
 
 TEST = settings.PAYPAL_TEST
-USER = settings.PAYPAL_WPP_USER 
+USER = settings.PAYPAL_WPP_USER
 PASSWORD = settings.PAYPAL_WPP_PASSWORD
 SIGNATURE = settings.PAYPAL_WPP_SIGNATURE
 VERSION = 54.0
@@ -32,7 +32,7 @@ def paypal_time(time_obj=None):
     if time_obj is None:
         time_obj = time.gmtime()
     return time.strftime(PayPalNVP.TIMESTAMP_FORMAT, time_obj)
-    
+
 def paypaltime2datetime(s):
     """Convert a PayPal time string to a DateTime."""
     return datetime.datetime(*(time.strptime(s, PayPalNVP.TIMESTAMP_FORMAT)[:6]))
@@ -40,21 +40,22 @@ def paypaltime2datetime(s):
 
 class PayPalError(TypeError):
     """Error thrown when something be wrong."""
-    
+
 
 class PayPalWPP(object):
     """
     Wrapper class for the PayPal Website Payments Pro.
-    
+
     Website Payments Pro Integration Guide:
     https://cms.paypal.com/cms_content/US/en_US/files/developer/PP_WPP_IntegrationGuide.pdf
 
     Name-Value Pair API Developer Guide and Reference:
     https://cms.paypal.com/cms_content/US/en_US/files/developer/PP_NVPAPI_DeveloperGuide.pdf
     """
-    def __init__(self, request, params=BASE_PARAMS):
+    def __init__(self, ipaddress, user, params=BASE_PARAMS):
         """Required - USER / PWD / SIGNATURE / VERSION"""
-        self.request = request
+        self.ipaddress = ipaddress
+        self.user = user
         if TEST:
             self.endpoint = SANDBOX_ENDPOINT
         else:
@@ -65,17 +66,60 @@ class PayPalWPP(object):
     def doDirectPayment(self, params):
         """Call PayPal DoDirectPayment method."""
         defaults = {"method": "DoDirectPayment", "paymentaction": "Sale"}
-        required = L("creditcardtype acct expdate cvv2 ipaddress firstname lastname street city state countrycode zip amt")
+        required = L("ipaddress creditcardtype acct expdate cvv2 firstname lastname street city state countrycode zip amt")
+        optional = L("returnfmfdetails startdate issuenumber email street2 shiptophonenum currencycode itemamt shippingamt handlingamt taxamt desc custom invnum buttonsource notifyurl")
         nvp_obj = self._fetch(params, required, defaults)
         if nvp_obj.flag:
             raise PayPalFailure(nvp_obj.flag_info)
-        payment_was_successful.send(params)
+        if params["paymentaction"] == "Sale":
+            payment_was_successful.send(params)
         # @@@ Could check cvv2match / avscode are both 'X' or '0'
         # qd = django.http.QueryDict(nvp_obj.response)
         # if qd.get('cvv2match') not in ['X', '0']:
         #   nvp_obj.set_flag("Invalid cvv2match: %s" % qd.get('cvv2match')
         # if qd.get('avscode') not in ['X', '0']:
         #   nvp_obj.set_flag("Invalid avscode: %s" % qd.get('avscode')
+        return nvp_obj
+
+    def doCapture(self, params):
+        """Call PayPal DoCapture method."""
+        defaults = {"method": "DoCapture", "completetype": "NotComplete"}
+        required = L("authorizationid amt")
+        optional = L("currencycode invnum note softdescriptor")
+        nvp_obj = self._fetch(params, required, defaults)
+        if nvp_obj.flag:
+            raise PayPalFailure(nvp_obj.flag_info)
+        payment_was_successful.send(params)
+        return nvp_obj
+
+    def doAuthorization(self, params):
+        """Call PayPal DoAuthorization method."""
+        defaults = {"method": "DoAuthorization", "transactionentity": "Order"}
+        required = L("transactionid amt")
+        optional = L("currencycode")
+        nvp_obj = self._fetch(params, required, defaults)
+        if nvp_obj.flag:
+            raise PayPalFailure(nvp_obj.flag_info)
+        return nvp_obj
+
+    def doReauthorization(self, params):
+        """Call PayPal DoReauthorization method."""
+        defaults = {"method": "DoReauthorization"}
+        required = L("authorizationid amt")
+        optional = L("currencycode")
+        nvp_obj = self._fetch(params, required, defaults)
+        if nvp_obj.flag:
+            raise PayPalFailure(nvp_obj.flag_info)
+        return nvp_obj
+
+    def doVoid(self, params):
+        """Call PayPal DoVoid method."""
+        defaults = {"method": "DoVoid"}
+        required = L("authorizationid")
+        optional = L("note")
+        nvp_obj = self._fetch(params, required, defaults)
+        if nvp_obj.flag:
+            raise PayPalFailure(nvp_obj.flag_info)
         return nvp_obj
 
     def setExpressCheckout(self, params):
@@ -104,9 +148,10 @@ class PayPalWPP(object):
         nvp_obj = self._fetch(params, required, defaults)
         if nvp_obj.flag:
             raise PayPalFailure(nvp_obj.flag_info)
-        payment_was_successful.send(params)
+        if params["paymentaction"] == "Sale":
+            payment_was_successful.send(params)
         return nvp_obj
-        
+
     def createRecurringPaymentsProfile(self, params, direct=False):
         """
         Set direct to True to indicate that this is being called as a directPayment.
@@ -122,7 +167,7 @@ class PayPalWPP(object):
             required + L("token payerid")
 
         nvp_obj = self._fetch(params, required, defaults)
-        
+
         # Flag if profile_type != ActiveProfile
         if nvp_obj.flag:
             raise PayPalFailure(nvp_obj.flag_info)
@@ -163,10 +208,10 @@ class PayPalWPP(object):
         if nvp_obj.flag:
             raise PayPalFailure(nvp_obj.flag_info)
         return nvp_obj
-    
+
     def billOutstandingAmount(self, params):
         raise NotImplementedError
-        
+
     def manangeRecurringPaymentsProfileStatus(self, params, fail_silently=False):
         """
         Requires `profileid` and `action` params.
@@ -188,9 +233,15 @@ class PayPalWPP(object):
         else:
             raise PayPalFailure(nvp_obj.flag_info)
         return nvp_obj
-        
+
     def refundTransaction(self, params):
-        raise NotImplementedError
+        """Call PayPal RefundTransaction method."""
+        defaults = {"method": "RefundTransaction", "refundtype": "Full"}
+        required = L("transactionid")
+        optional = L("invoiceid amt currencycode note")
+        nvp_obj = self._fetch(params, required, defaults)
+        if nvp_obj.flag:
+            raise PayPalFailure(nvp_obj.flag_info)
 
     def _is_recurring(self, params):
         """Returns True if the item passed is a recurring transaction."""
@@ -208,7 +259,7 @@ class PayPalWPP(object):
         for k in params.keys():
             if k in REMOVE:
                 del params[k]
-                
+
         return params
 
     def _fetch(self, params, required, defaults):
@@ -218,7 +269,7 @@ class PayPalWPP(object):
         pp_string = self.signature + urlencode(pp_params)
         response = self._request(pp_string)
         response_params = self._parse_response(response)
-        
+
         if getattr(settings, 'PAYPAL_DEBUG', settings.DEBUG):
             print 'PayPal Request:'
             pprint.pprint(defaults)
@@ -236,25 +287,35 @@ class PayPalWPP(object):
             nvp_params['timestamp'] = paypaltime2datetime(nvp_params['timestamp'])
 
         nvp_obj = PayPalNVP(**nvp_params)
-        nvp_obj.init(self.request, params, response_params)
+        nvp_obj.init(self.ipaddress, self.user, params, response_params)
         nvp_obj.save()
         return nvp_obj
-        
+
     def _request(self, data):
         """Moved out to make testing easier."""
         return urllib2.urlopen(self.endpoint, data).read()
+        #import hashlib
+        #from django.core.cache import cache
+        #_k_ = hashlib.md5(self.endpoint+data).hexdigest()
+        #ret = cache.get(_k_)
+        #if not ret:
+        #    ret = urllib2.urlopen(self.endpoint, data).read()
+        #    cache.set(_k_, ret, 200)
+        #return ret
 
     def _check_and_update_params(self, required, params):
         """
         Ensure all required parameters were passed to the API call and format
         them correctly.
         """
-        for r in required:
-            if r not in params:
-                raise PayPalError("Missing required param: %s" % r)    
-
         # Upper case all the parameters for PayPal.
-        return (dict((k.upper(), v) for k, v in params.iteritems()))
+        params = (dict((k.upper(), v) for k, v in params.iteritems() if v is not None))
+
+        for r in required:
+            if r.upper() not in params:
+                raise PayPalError("Missing required param: %s" % r)
+
+        return params
 
     def _parse_response(self, response):
         """Turn the PayPal response into a dict"""
